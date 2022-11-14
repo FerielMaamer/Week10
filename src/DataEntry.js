@@ -40,10 +40,10 @@ export default class DataEntry extends React.Component{
                 <form>
                     
                     <div>
-                        <label style={{display: "block", textAlign:"center"}} htmlFor="email">Email Address</label>
+                        <label style={{display: "block", textAlign:"center"}} htmlFor="emailAddress">Email Address</label>
                         <input 
                             type="text" 
-                            name="email"
+                            name="emailAddress"
                             placeholder="Enter email"                        
                             style={{width:"100%", margin:"10px", display:"block"}}
                             onChange={event => this.onValueChanged(event)} />
@@ -63,7 +63,7 @@ export default class DataEntry extends React.Component{
                         <input 
                         id="address"
                         type="text" 
-                        name="Address"
+                        name="address"
                         placeholder="1234 Main St"
                         style={{width:"100%", margin:"10px", display:"block"}}
                         onChange={event => this.onValueChanged(event)} />
@@ -115,7 +115,7 @@ export default class DataEntry extends React.Component{
                 <>
                     <p>Email: {this.state.emailAddress}</p>
                     <p>Full Name: {this.state.name}</p>
-                    <p>Address: {this.state.address + this.state.address2}</p>
+                    <p>Address: {this.state.address +" "+ this.state.address2}</p>
                     <p>City: {this.state.city}</p>
                     <p>Province: {this.state.province}</p>
                     <p>Postal Code: {this.state.postalCode}</p>
